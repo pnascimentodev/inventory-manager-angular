@@ -14,9 +14,31 @@
         <i class="bi bi-bell"></i>
         <span class="notification-badge">3</span>
       </div>
-      <div class="user-profile">
-        <span class="welcome-text">Bem-vindo, Admin</span>
-        <i class="bi bi-person-circle"></i>
+      <div class="user-profile" (click)="$event.stopPropagation()">
+        <div class="profile-trigger" (click)="toggleDropdown()">
+          <div class="profile-info">
+            <span class="welcome-text">Bem-vindo, Admin</span>
+            <div class="profile-icons">
+              <i class="bi bi-person-circle"></i>
+              <i class="bi bi-chevron-down" [class.rotate]="isDropdownOpen"></i>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-menu" *ngIf="isDropdownOpen">
+          <div class="dropdown-item" (click)="onMenuItemClick('profile')">
+            <i class="bi bi-person"></i>
+            <span>Perfil</span>
+          </div>
+          <div class="dropdown-item" (click)="onMenuItemClick('settings')">
+            <i class="bi bi-gear"></i>
+            <span>Configurações</span>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item logout" (click)="onMenuItemClick('logout')">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sair</span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -236,67 +258,6 @@
               </td>
             </tr>
             <tr>
-                <td>
-                  <div class="device-info">
-                    <i class="bi bi-laptop"></i>
-                    <span>Notebook Dell XPS</span>
-                  </div>
-                </td>
-                <td>Notebook</td>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">JS</div>
-                    <span>João Silva</span>
-                  </div>
-                </td>
-                <td><span class="status-badge active">Em Uso</span></td>
-                <td>23/01/2024</td>
-                <td>
-                  <button class="action-btn">
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="device-info">
-                    <i class="bi bi-display"></i>
-                    <span>Monitor LG 27"</span>
-                  </div>
-                </td>
-                <td>Monitor</td>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">MS</div>
-                    <span>Maria Santos</span>
-                  </div>
-                </td>
-                <td><span class="status-badge active">Em Uso</span></td>
-                <td>22/01/2024</td>
-                <td>
-                  <button class="action-btn">
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="device-info">
-                    <i class="bi bi-phone"></i>
-                    <span>iPhone 13</span>
-                  </div>
-                </td>
-                <td>Smartphone</td>
-                <td>-</td>
-                <td><span class="status-badge available">Disponível</span></td>
-                <td>21/01/2024</td>
-                <td>
-                  <button class="action-btn">
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
                 <td>
                   <div class="device-info">
                     <i class="bi bi-laptop"></i>

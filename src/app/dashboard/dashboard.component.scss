@@ -73,21 +73,122 @@
     }
 
     .user-profile {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      position: relative;
       cursor: pointer;
 
-      .welcome-text {
-        color: #666;
-        font-size: 0.9rem;
+      .profile-trigger {
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #f7f6fd;
+        }
+
+        .profile-info {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .welcome-text {
+            color: #666;
+            font-size: 0.9rem;
+          }
+
+          .profile-icons {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            i {
+              &.bi-person-circle {
+                font-size: 24px;
+                color: #2a0a7c;
+              }
+
+              &.bi-chevron-down {
+                font-size: 14px;
+                color: #666;
+                transition: transform 0.2s ease;
+
+                &.rotate {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+        }
       }
 
-      i {
-        font-size: 24px;
-        color: #2a0a7c;
+      .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 4px);
+        right: 0;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(42,10,124,0.15);
+        min-width: 200px;
+        z-index: 1000;
+        animation: dropdownFadeIn 0.2s ease;
+
+        .dropdown-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 16px;
+          color: #333;
+          transition: all 0.2s;
+          
+          i {
+            font-size: 18px;
+            color: #2a0a7c;
+          }
+
+          &:hover {
+            background-color: #f7f6fd;
+          }
+
+          &:first-child {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+          }
+
+          &:last-child {
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+          }
+
+          &.logout {
+            color: #d32f2f;
+            
+            i {
+              color: #d32f2f;
+            }
+
+            &:hover {
+              background-color: #fef2f2;
+            }
+          }
+        }
+
+        .dropdown-divider {
+          height: 1px;
+          background-color: #eee;
+          margin: 8px 0;
+        }
       }
     }
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
