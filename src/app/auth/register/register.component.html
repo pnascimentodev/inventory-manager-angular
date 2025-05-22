@@ -1,1 +1,57 @@
-<p>register works!</p>
+<main>
+    <section class="form-section">
+      <div class="logo-container">
+        <img src="assets/logo.svg" alt="Logo" class="logo">
+      </div>
+  
+      <form class="login-form" (ngSubmit)="onSubmit()" #registerForm="ngForm" novalidate>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" [(ngModel)]="form.username" required placeholder="Enter your username">
+        </div>
+  
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="form.password" required placeholder="Enter your password">
+        </div>
+  
+        <div class="input-group">
+          <label class="user-type-label">User Type</label>
+          <div class="user-type-options">
+            <div class="user-type-option">
+              <input type="radio" id="admin" name="userType" [(ngModel)]="form.userType" value="Admin" required>
+              <label for="admin" class="user-type-button">
+                <i class="bi bi-shield-lock"></i>
+                <span>Admin</span>
+              </label>
+            </div>
+            <div class="user-type-option">
+              <input type="radio" id="tech" name="userType" [(ngModel)]="form.userType" value="Tech" required>
+              <label for="tech" class="user-type-button">
+                <i class="bi bi-tools"></i>
+                <span>Tech</span>
+              </label>
+            </div>
+          </div>
+        </div>
+  
+        <div *ngIf="showError" style="color: red; font-size: 0.9rem;">
+          Todos os campos são obrigatórios.
+        </div>
+  
+        <button type="submit" class="login-btn">Register</button>
+  
+        <div class="divider">
+          <span>ou</span>
+        </div>
+  
+        <button type="button" class="register-btn" (click)="goToLogin()">Login</button>
+      </form>
+    </section>
+  
+    <section class="main-section">
+      <h1>Join us and take control of everything.</h1>
+      <img src="assets/main.png" alt="System Overview" class="system-image">
+    </section>
+  </main>
+  
