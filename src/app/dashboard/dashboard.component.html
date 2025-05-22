@@ -11,8 +11,63 @@
     </div>
     <div class="user-info">
       <div class="notifications">
-        <i class="bi bi-bell"></i>
-        <span class="notification-badge">3</span>
+        <div class="notification-trigger" (click)="toggleNotifications(); $event.stopPropagation()">
+          <i class="bi bi-bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="notifications-dropdown" *ngIf="isNotificationsOpen" (click)="$event.stopPropagation()">
+          <div class="notifications-header">
+            <h3>Notificações</h3>
+            <button class="mark-all-read" (click)="markAllAsRead($event)">
+              <i class="bi bi-check2-all"></i>
+              Marcar todas como lidas
+            </button>
+          </div>
+          <div class="notifications-list">
+            <div class="notification-item unread">
+              <div class="notification-icon warning">
+                <i class="bi bi-exclamation-triangle"></i>
+              </div>
+              <div class="notification-content">
+                <div class="notification-title">
+                  <span>Manutenção Necessária</span>
+                  <span class="time">2h atrás</span>
+                </div>
+                <p>Notebook Dell XPS precisa de atualização de software</p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <div class="notification-icon success">
+                <i class="bi bi-check-circle"></i>
+              </div>
+              <div class="notification-content">
+                <div class="notification-title">
+                  <span>Equipamento Devolvido</span>
+                  <span class="time">3h atrás</span>
+                </div>
+                <p>Monitor LG 27" devolvido por Maria Santos</p>
+              </div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon info">
+                <i class="bi bi-info-circle"></i>
+              </div>
+              <div class="notification-content">
+                <div class="notification-title">
+                  <span>Novo Equipamento</span>
+                  <span class="time">1d atrás</span>
+                </div>
+                <p>5 novos notebooks adicionados ao inventário</p>
+              </div>
+            </div>
+          </div>
+          <div class="notifications-footer">
+            <button class="view-all-notifications">
+              Ver todas as notificações
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="user-profile" (click)="$event.stopPropagation()">
         <div class="profile-trigger" (click)="toggleDropdown()">
@@ -258,67 +313,6 @@
               </td>
             </tr>
             <tr>
-                <td>
-                  <div class="device-info">
-                    <i class="bi bi-laptop"></i>
-                    <span>Notebook Dell XPS</span>
-                  </div>
-                </td>
-                <td>Notebook</td>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">JS</div>
-                    <span>João Silva</span>
-                  </div>
-                </td>
-                <td><span class="status-badge active">Em Uso</span></td>
-                <td>23/01/2024</td>
-                <td>
-                  <button class="action-btn">
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="device-info">
-                    <i class="bi bi-display"></i>
-                    <span>Monitor LG 27"</span>
-                  </div>
-                </td>
-                <td>Monitor</td>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">MS</div>
-                    <span>Maria Santos</span>
-                  </div>
-                </td>
-                <td><span class="status-badge active">Em Uso</span></td>
-                <td>22/01/2024</td>
-                <td>
-                  <button class="action-btn">
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="device-info">
-                    <i class="bi bi-phone"></i>
-                    <span>iPhone 13</span>
-                  </div>
-                </td>
-                <td>Smartphone</td>
-                <td>-</td>
-                <td><span class="status-badge available">Disponível</span></td>
-                <td>21/01/2024</td>
-                <td>
-                  <button class="action-btn">
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
                 <td>
                   <div class="device-info">
                     <i class="bi bi-laptop"></i>

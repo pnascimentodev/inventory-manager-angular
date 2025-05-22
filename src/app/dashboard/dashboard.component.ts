@@ -11,28 +11,48 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   isDropdownOpen = false;
+  isNotificationsOpen = false;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  toggleDropdown(): void {
+  toggleDropdown(event?: MouseEvent): void {
+    if (event) {
+      event.stopPropagation();
+    }
     this.isDropdownOpen = !this.isDropdownOpen;
+    if (this.isDropdownOpen) {
+      this.isNotificationsOpen = false;
+    }
+  }
+
+  toggleNotifications(event?: MouseEvent): void {
+    if (event) {
+      event.stopPropagation();
+    }
+    this.isNotificationsOpen = !this.isNotificationsOpen;
+    if (this.isNotificationsOpen) {
+      this.isDropdownOpen = false;
+    }
+  }
+
+  markAllAsRead(event: MouseEvent): void {
+    event.stopPropagation();
+    console.log('Marcando todas as notificações como lidas');
+    // Implementar lógica para marcar todas como lidas
   }
 
   onMenuItemClick(action: string): void {
     switch (action) {
       case 'profile':
-        // Navegar para o perfil
         console.log('Navegando para o perfil');
         break;
       case 'settings':
-        // Navegar para as configurações
         console.log('Navegando para as configurações');
         break;
       case 'logout':
-        // Fazer logout e navegar para a página de login
         this.router.navigate(['/login']);
         break;
     }
@@ -41,9 +61,15 @@ export class DashboardComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent): void {
-    const profileElement = (event.target as HTMLElement).closest('.user-profile');
+    const target = event.target as HTMLElement;
+    const profileElement = target.closest('.user-profile');
+    const notificationsElement = target.closest('.notifications');
+    
     if (!profileElement) {
       this.isDropdownOpen = false;
+    }
+    if (!notificationsElement) {
+      this.isNotificationsOpen = false;
     }
   }
 }
