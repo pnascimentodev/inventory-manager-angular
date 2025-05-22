@@ -36,7 +36,11 @@
         </div>
   
         <div *ngIf="showError" style="color: red; font-size: 0.9rem;">
-          Todos os campos são obrigatórios.
+          {{ errorMessage }}
+        </div>
+  
+        <div *ngIf="showSuccess" style="color: green; font-size: 0.9rem;">
+          {{ successMessage }}
         </div>
   
         <button type="submit" class="login-btn">Register</button>
