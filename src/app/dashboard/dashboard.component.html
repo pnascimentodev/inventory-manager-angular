@@ -1,0 +1,588 @@
+<div class="dashboard-container">
+  <!-- Cabeçalho com breadcrumb -->
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div class="breadcrumb">
+        <span>Home</span>
+        <i class="bi bi-chevron-right"></i>
+        <span class="current">Dashboard</span>
+      </div>
+      <h1>Visão Geral</h1>
+    </div>
+    <div class="user-info">
+      <div class="notifications">
+        <i class="bi bi-bell"></i>
+        <span class="notification-badge">3</span>
+      </div>
+      <div class="user-profile">
+        <span class="welcome-text">Bem-vindo, Admin</span>
+        <i class="bi bi-person-circle"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cards de Resumo -->
+  <section class="summary-cards">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-icon">
+          <i class="bi bi-laptop"></i>
+        </div>
+        <div class="card-info">
+          <h3>Total de Equipamentos</h3>
+          <div class="number-container">
+            <p class="number">156</p>
+            <span class="trend positive">
+              <i class="bi bi-arrow-up-short"></i>
+              12%
+            </span>
+          </div>
+          <span class="status">12 disponíveis</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span>Ver detalhes</span>
+        <i class="bi bi-arrow-right"></i>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <div class="card-icon">
+          <i class="bi bi-people"></i>
+        </div>
+        <div class="card-info">
+          <h3>Usuários Ativos</h3>
+          <div class="number-container">
+            <p class="number">48</p>
+            <span class="trend positive">
+              <i class="bi bi-arrow-up-short"></i>
+              8%
+            </span>
+          </div>
+          <span class="status">3 novos esta semana</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span>Ver detalhes</span>
+        <i class="bi bi-arrow-right"></i>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <div class="card-icon">
+          <i class="bi bi-arrow-left-right"></i>
+        </div>
+        <div class="card-info">
+          <h3>Movimentações</h3>
+          <div class="number-container">
+            <p class="number">27</p>
+            <span class="trend negative">
+              <i class="bi bi-arrow-down-short"></i>
+              5%
+            </span>
+          </div>
+          <span class="status">Últimos 30 dias</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span>Ver detalhes</span>
+        <i class="bi bi-arrow-right"></i>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <div class="card-icon warning">
+          <i class="bi bi-exclamation-triangle"></i>
+        </div>
+        <div class="card-info">
+          <h3>Pendências</h3>
+          <div class="number-container">
+            <p class="number">5</p>
+            <span class="trend negative">
+              <i class="bi bi-arrow-up-short"></i>
+              2
+            </span>
+          </div>
+          <span class="status">Requer atenção</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span>Ver detalhes</span>
+        <i class="bi bi-arrow-right"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Principal -->
+  <div class="main-content">
+    <!-- Equipamentos Recentes -->
+    <section class="recent-section">
+      <div class="section-header">
+        <div class="header-left">
+          <h2>Equipamentos Recentes</h2>
+          <span class="subtitle">Últimas atualizações do inventário</span>
+        </div>
+        <div class="header-actions">
+          <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Buscar equipamento...">
+          </div>
+          <button class="view-all">
+            <span>Ver Todos</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <div class="th-content">
+                  Equipamento
+                  <i class="bi bi-arrow-down-up"></i>
+                </div>
+              </th>
+              <th>
+                <div class="th-content">
+                  Tipo
+                  <i class="bi bi-arrow-down-up"></i>
+                </div>
+              </th>
+              <th>
+                <div class="th-content">
+                  Usuário
+                  <i class="bi bi-arrow-down-up"></i>
+                </div>
+              </th>
+              <th>
+                <div class="th-content">
+                  Status
+                  <i class="bi bi-arrow-down-up"></i>
+                </div>
+              </th>
+              <th>
+                <div class="th-content">
+                  Data
+                  <i class="bi bi-arrow-down-up"></i>
+                </div>
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="device-info">
+                  <i class="bi bi-laptop"></i>
+                  <span>Notebook Dell XPS</span>
+                </div>
+              </td>
+              <td>Notebook</td>
+              <td>
+                <div class="user-info">
+                  <div class="user-avatar">JS</div>
+                  <span>João Silva</span>
+                </div>
+              </td>
+              <td><span class="status-badge active">Em Uso</span></td>
+              <td>23/01/2024</td>
+              <td>
+                <button class="action-btn">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="device-info">
+                  <i class="bi bi-display"></i>
+                  <span>Monitor LG 27"</span>
+                </div>
+              </td>
+              <td>Monitor</td>
+              <td>
+                <div class="user-info">
+                  <div class="user-avatar">MS</div>
+                  <span>Maria Santos</span>
+                </div>
+              </td>
+              <td><span class="status-badge active">Em Uso</span></td>
+              <td>22/01/2024</td>
+              <td>
+                <button class="action-btn">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="device-info">
+                  <i class="bi bi-phone"></i>
+                  <span>iPhone 13</span>
+                </div>
+              </td>
+              <td>Smartphone</td>
+              <td>-</td>
+              <td><span class="status-badge available">Disponível</span></td>
+              <td>21/01/2024</td>
+              <td>
+                <button class="action-btn">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-laptop"></i>
+                    <span>Notebook Dell XPS</span>
+                  </div>
+                </td>
+                <td>Notebook</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">JS</div>
+                    <span>João Silva</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>23/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-display"></i>
+                    <span>Monitor LG 27"</span>
+                  </div>
+                </td>
+                <td>Monitor</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">MS</div>
+                    <span>Maria Santos</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>22/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-phone"></i>
+                    <span>iPhone 13</span>
+                  </div>
+                </td>
+                <td>Smartphone</td>
+                <td>-</td>
+                <td><span class="status-badge available">Disponível</span></td>
+                <td>21/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-laptop"></i>
+                    <span>Notebook Dell XPS</span>
+                  </div>
+                </td>
+                <td>Notebook</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">JS</div>
+                    <span>João Silva</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>23/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-display"></i>
+                    <span>Monitor LG 27"</span>
+                  </div>
+                </td>
+                <td>Monitor</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">MS</div>
+                    <span>Maria Santos</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>22/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-phone"></i>
+                    <span>iPhone 13</span>
+                  </div>
+                </td>
+                <td>Smartphone</td>
+                <td>-</td>
+                <td><span class="status-badge available">Disponível</span></td>
+                <td>21/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-laptop"></i>
+                    <span>Notebook Dell XPS</span>
+                  </div>
+                </td>
+                <td>Notebook</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">JS</div>
+                    <span>João Silva</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>23/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-display"></i>
+                    <span>Monitor LG 27"</span>
+                  </div>
+                </td>
+                <td>Monitor</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">MS</div>
+                    <span>Maria Santos</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>22/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-phone"></i>
+                    <span>iPhone 13</span>
+                  </div>
+                </td>
+                <td>Smartphone</td>
+                <td>-</td>
+                <td><span class="status-badge available">Disponível</span></td>
+                <td>21/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-laptop"></i>
+                    <span>Notebook Dell XPS</span>
+                  </div>
+                </td>
+                <td>Notebook</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">JS</div>
+                    <span>João Silva</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>23/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-display"></i>
+                    <span>Monitor LG 27"</span>
+                  </div>
+                </td>
+                <td>Monitor</td>
+                <td>
+                  <div class="user-info">
+                    <div class="user-avatar">MS</div>
+                    <span>Maria Santos</span>
+                  </div>
+                </td>
+                <td><span class="status-badge active">Em Uso</span></td>
+                <td>22/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="device-info">
+                    <i class="bi bi-phone"></i>
+                    <span>iPhone 13</span>
+                  </div>
+                </td>
+                <td>Smartphone</td>
+                <td>-</td>
+                <td><span class="status-badge available">Disponível</span></td>
+                <td>21/01/2024</td>
+                <td>
+                  <button class="action-btn">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>                                                                                                                                                                                          
+                </td>
+              </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Seções Laterais -->
+    <div class="side-sections">
+      <!-- Atividades Recentes -->
+      <section class="activities-section">
+        <div class="section-header">
+          <h2>Atividades Recentes</h2>
+          <button class="filter-btn">
+            <i class="bi bi-filter"></i>
+            Filtrar
+          </button>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon return">
+              <i class="bi bi-arrow-return-right"></i>
+            </div>
+            <div class="activity-details">
+              <div class="activity-header">
+                <p>Notebook devolvido</p>
+                <span class="time">2h</span>
+              </div>
+              <span class="user">por Ana Silva</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon assign">
+              <i class="bi bi-arrow-return-left"></i>
+            </div>
+            <div class="activity-details">
+              <div class="activity-header">
+                <p>Monitor alocado</p>
+                <span class="time">3h</span>
+              </div>
+              <span class="user">para Carlos Santos</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon maintenance">
+              <i class="bi bi-tools"></i>
+            </div>
+            <div class="activity-details">
+              <div class="activity-header">
+                <p>Enviado para manutenção</p>
+                <span class="time">5h</span>
+              </div>
+              <span class="user">Notebook ThinkPad</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estatísticas -->
+      <section class="stats-section">
+        <div class="section-header">
+          <h2>Distribuição de Equipamentos</h2>
+          <div class="period-selector">
+            <button class="active">Mês</button>
+            <button>Ano</button>
+          </div>
+        </div>
+        <div class="stats-list">
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">Notebooks</span>
+              <span class="stat-value">75%</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">Monitores</span>
+              <span class="stat-value">60%</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">Smartphones</span>
+              <span class="stat-value">45%</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 45%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">Outros</span>
+              <span class="stat-value">30%</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 30%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
